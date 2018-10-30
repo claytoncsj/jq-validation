@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form-validation</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/localization/messages_pt_BR.min.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav></nav>
+    </header>
+    <section class="formulario" >
+        <h1>Faça o cadastro</h1>
+        <form action="" >
+            <label for="">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+            <label for="">Email</label>
+            <input type="text" name="email" id="email" placeholder="exemplo@sevidor.com">
+            <label for="">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="4c&435*/">
+            <label for="">Telefone</label>
+            <input type="text" name="senha" id="senha" placeholder="73 90 0000000">
+            <div class="select">
+                <select name="cidade" id="cidade">
+                    <option value=""> Cidade</option>
+                    <option value="">Nilo Peçanha</option>
+                    <option value="">Salvador</option>
+                    <option value="">Brasília</option>
+                </select>
+            </div>
+            <button>Cadastrar</button>
+            <button class="logout">Entrar</button>
+        </form>
+    </section>
 </body>
 </html>
