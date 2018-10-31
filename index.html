@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form-validation</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/additional-methods.min.js"></script>
-    <script src="js/localization/messages_pt_BR.min.js"></script>
 </head>
+
 <body>
     <header>
         <nav></nav>
     </header>
     <section class="formulario" >
         <img src="img/logo.png" alt="">
-        <form action="" >
+        <form action="index.html" id="cadastro" method="POST">
             <label for="">Nome</label>
             <input type="text" name="nome" id="nome" placeholder="Nome">
             <label for="">Email</label>
-            <input type="text" name="email" id="email" placeholder="exemplo@sevidor.com">
+            <input type="text" name="email" id="email" placeholder="exemplo@servidor.com">
             <label for="">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="4c&435*/">
+            <input type="password" name="senha" id="senha" placeholder="******">
             <label for="">Telefone</label>
-            <input type="text" name="senha" id="senha" placeholder="73 90 0000000">
+            <input type="number" name="telefon" id="telefone" placeholder="00 90 0000000">
             <div class="select">
                 <select name="cidade" id="cidade">
                     <option value=""> Cidade</option>
@@ -38,5 +35,38 @@
             <button class="logout">Entrar</button>
         </form>
     </section>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="js/localization/messages_pt_BR.min.js"></script>
+    <!-- <script src="js/script-form.js"></script> -->
+    <script>
+            $(document).ready(function(){
+            $('#cadastro').val({
+                rules:{
+						nome: {
+							required: true,
+							maxlength: 100,
+							minlength: 10,
+							minWords: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						cidade: {
+							required: true
+						},
+						telefone: {
+							required: true,
+							min: 1,
+							max: 120
+                        },
+    
+				}
+            })
+        })
+        </script>
 </body>
 </html>
