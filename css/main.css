@@ -11,6 +11,7 @@ body{
     background-position: center;
     width: 100%;
     max-height: 100vh;
+    
 }
  .formulario{
     display: flex;
@@ -20,19 +21,18 @@ body{
     align-items: center;
    
 }
-.formulario h1{
-    font-size: 25px;
-    padding: 10px;
-    color: #6C63FF;
-}
+.formulario img{margin-top: 20px;}
 .formulario form{ width: 30%;} 
-
 .formulario input{
     padding: 10px;
     margin-bottom: 10px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+.formulario input:focus{
+    outline: none;
+    border: 1px solid #6C63FF;
 }
 .formulario select{
     padding: 10px;
@@ -41,11 +41,15 @@ body{
     border: 1px solid #ccc;
     border-radius: 6px;
 }
+.formulario select:focus{
+    outline: none;
+    border: 1px solid #6C63FF;
+}
 .formulario button{
     padding: 10px;
     width: 100%;
     border: none;
-    background-color: rgb(240, 112, 112);
+    background-color: #f07070;
     color: #fff;
     border: none;
     border-radius: 6px;
